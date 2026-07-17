@@ -1,0 +1,19 @@
+version: "3.9"
+
+services:
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: recruitment-api
+    ports:
+      - "8000:8000"
+    # Load API keys from your .env file (NOT committed to git)
+    env_file:
+      - .env
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "python", "-c", "import httpx; httpx.get('http://localhost:8000/').raise_for_status()"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
