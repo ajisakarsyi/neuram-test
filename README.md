@@ -33,8 +33,8 @@ A FastAPI application that provides two features:
 
 ```bash
 # 1. Clone the repository
-git clone <your-repo-url>
-cd recruitment-api
+git clone https://github.com/ajisakarsyi/neuram-test.git
+cd neuram-test
 
 # 2. Set up environment variables
 cp .env.example .env
