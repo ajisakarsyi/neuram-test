@@ -50,7 +50,7 @@ docker-compose up --build
 
 ```bash
 # 1. Clone the repository
-git clone <your-repo-url>
+git clone https://github.com/ajisakarsyi/neuram-test.git
 cd recruitment-api
 
 # 2. Create and activate a virtual environment
